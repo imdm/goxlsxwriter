@@ -38,7 +38,7 @@ func NewWorkbook(filename string, options *WorkbookOptions) *Workbook {
 		}
 	}
 
-	cWorkbook := C.new_workbook_opt(cFilename, cOptions)
+	cWorkbook := C.workbook_new_opt(cFilename, cOptions)
 
 	workbook := &Workbook{
 		CWorkbook: cWorkbook,
